@@ -1,3 +1,4 @@
+pip install joblib
 import joblib
 model = joblib.load('Rain_model.pkl')
 import streamlit as st
