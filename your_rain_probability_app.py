@@ -24,10 +24,10 @@ if st.button("predict rainfalls in January"):
     features = [[feb,mar,apr,may,nov,dec,mar2may,year]]
     prediction = model.predict(features)
     st.write(f"Rain fall: {prediction[0]:.2f}CM")
+    if prediction>100:
+        st.write("Your start of the year is gonna be wettt! \n pro tip: carry umbrellas") 
+    elif prediction<100 and prediction>50:
+        st.write("Janaury gonna be pretty regular")
+    elif prediction<50:
+        st.write("January as dry as your wife")
     
-if prediction>100:
-    st.write("Your start of the year is gonna be wettt! \n pro tip: carry umbrellas") 
-elif prediction<100 and prediction>50:
-    st.write("Janaury gonna be pretty regular")
-elif prediction<50:
-    st.write("January as dry as your wife")
